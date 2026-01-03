@@ -1,0 +1,91 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  /*background: linear-gradient(0deg,rgb(178, 178, 249),rgb(147, 220, 147));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+*/    }
+
+#board {
+  display: grid;
+ position: relative;
+ top:100px;
+  grid-template-columns: repeat(5, 50px);
+  gap: 6px;
+  justify-content: center;
+  
+}
+
+.tile {
+  width: 50px;
+  background-color: aliceblue;
+  height: 50px;
+  border: 2px solid rgb(197, 178, 178);
+  font-size: 24px;
+
+  font-weight: bold;
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+
+#msg{
+    position: relative;
+    top:250px;
+
+}
+.green { background: #6aaa64; color: white; }
+.yellow { background: #c9b458; color: white; }
+.gray { background: #787c7e; color: white; }
+
+
+.reset{
+    border-radius: 6px;
+    position: relative;
+    top:100px;
+
+    font-size: 20px;
+    padding: 10px;
+    /*background:linear-gradient(90deg,rgb(255, 128, 166),rgb(206, 239, 140));
+    */position: filter ease-in-out 0.1s;
+    box-shadow: 2px 3px 3px rgb(123, 122, 122);
+}
+
+.reset:hover{
+    filter: drop-shadow(2px 2px 2px rgb(123, 123, 123));
+}
+
+.reset:active{
+    filter: brightness(1.2);
+
+}
+
+.tip {
+  position: relative;
+}
+
+.tiptext {
+  position: absolute;
+  bottom: 100%;
+  left: 110%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tip:hover .tiptext {
+  opacity: 1;
+  transform: translateX(-5px) translateY(-5px);
+}
